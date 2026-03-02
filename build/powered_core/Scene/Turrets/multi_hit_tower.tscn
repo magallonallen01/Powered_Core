@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dda3apitena8m"]
+
+[ext_resource type="Script" uid="uid://g0xxeife0eaf" path="res://Scene/Turrets/multi_hit_tower.gd" id="1_8uh5x"]
+[ext_resource type="Texture2D" uid="uid://6dsyv276wgwd" path="res://Assets/Towers/towerDefense_tile181.png" id="1_65ki7"]
+[ext_resource type="Texture2D" uid="uid://dk5bciwundg3j" path="res://Assets/Towers/Multi_hit.png" id="2_y8jl0"]
+
+[node name="Multi_Hit_Tower" type="Node2D" unique_id=431002788]
+script = ExtResource("1_8uh5x")
+
+[node name="Base" type="Sprite2D" parent="." unique_id=2075301098]
+texture = ExtResource("1_65ki7")
+
+[node name="Turret" type="Sprite2D" parent="." unique_id=1110378026]
+texture = ExtResource("2_y8jl0")
+offset = Vector2(11, 0)
+
+[node name="Muzzle" type="Marker2D" parent="Turret" unique_id=412500736]
+position = Vector2(43, 0)

@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://bg85hyp8lgwe5"]
+
+[ext_resource type="PackedScene" uid="uid://dlgkfnupdn82g" path="res://Scene/Maps/level_1.tscn" id="1_w6li2"]
+[ext_resource type="Script" uid="uid://dkq1rmndps44f" path="res://Scene/MainScene/ui.gd" id="2_2re1l"]
+[ext_resource type="Texture2D" uid="uid://c4bdqlsvmrjfn" path="res://Assets/UI/Buttons/button_square_gradient.png" id="2_lejkv"]
+[ext_resource type="Texture2D" uid="uid://d3myumtucg8bq" path="res://Assets/Towers/towerDefense_tile249.png" id="3_2re1l"]
+[ext_resource type="Texture2D" uid="uid://dk5bciwundg3j" path="res://Assets/Towers/Multi_hit.png" id="4_qjssb"]
+[ext_resource type="Texture2D" uid="uid://bmwf71t5hy7xo" path="res://Assets/Towers/towerDefense_tile250.png" id="5_ver74"]
+[ext_resource type="Texture2D" uid="uid://cprdkomsb6nsp" path="res://Assets/Towers/towerDefense_tile251.png" id="6_o7bn1"]
+
+[node name="Game_Scene" type="Node2D" unique_id=101305981]
+
+[node name="Level_1" parent="." unique_id=1319157800 instance=ExtResource("1_w6li2")]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1336219324]
+script = ExtResource("2_2re1l")
+
+[node name="HUD" type="Control" parent="UI" unique_id=413666538]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BuildBar" type="VBoxContainer" parent="UI/HUD" unique_id=127807771]
+custom_minimum_size = Vector2(100, 400)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -400.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="basic_tower" type="TextureButton" parent="UI/HUD/BuildBar" unique_id=2062549267 groups=["build_buttons"]]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_lejkv")
+stretch_mode = 0
+
+[node name="Icon" type="TextureRect" parent="UI/HUD/BuildBar/basic_tower" unique_id=1664526802]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2re1l")
+
+[node name="multi_hit_tower" type="TextureButton" parent="UI/HUD/BuildBar" unique_id=2035494485 groups=["build_buttons"]]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_lejkv")
+stretch_mode = 0
+
+[node name="Icon" type="TextureRect" parent="UI/HUD/BuildBar/multi_hit_tower" unique_id=725056889]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_qjssb")
+
+[node name="aoe_tower" type="TextureButton" parent="UI/HUD/BuildBar" unique_id=1861275357 groups=["build_buttons"]]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_lejkv")
+stretch_mode = 0
+
+[node name="Icon" type="TextureRect" parent="UI/HUD/BuildBar/aoe_tower" unique_id=1975587512]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_ver74")
+
+[node name="air_tower" type="TextureButton" parent="UI/HUD/BuildBar" unique_id=1144669064 groups=["build_buttons"]]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_lejkv")
+stretch_mode = 0
+
+[node name="Icon" type="TextureRect" parent="UI/HUD/BuildBar/air_tower" unique_id=1605796312]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_o7bn1")

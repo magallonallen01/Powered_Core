@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cddvb58hik6gg"]
+
+[ext_resource type="Script" uid="uid://pxrt1jqmjbm0" path="res://Scene/Turrets/aoe_tower.gd" id="1_60nnf"]
+[ext_resource type="Texture2D" uid="uid://bmwf71t5hy7xo" path="res://Assets/Towers/towerDefense_tile250.png" id="1_sb8mk"]
+[ext_resource type="Texture2D" uid="uid://b73clgecb888w" path="res://Assets/Towers/towerDefense_tile180.png" id="2_b23ut"]
+
+[node name="AOE_Tower" type="Node2D" unique_id=1002953485]
+script = ExtResource("1_60nnf")
+
+[node name="Base" type="Sprite2D" parent="." unique_id=873175739]
+texture = ExtResource("2_b23ut")
+
+[node name="Turret" type="Sprite2D" parent="." unique_id=517647740]
+texture = ExtResource("1_sb8mk")
+offset = Vector2(13, 0)
+
+[node name="Muzzle" type="Marker2D" parent="Turret" unique_id=1201206267]
+position = Vector2(43, 0)
